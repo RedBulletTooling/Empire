@@ -63,6 +63,15 @@ cd Empire
 sudo ./setup/install.sh
 ```
 
+### Debian 10.3
+To install and run:
+
+```sh
+apt install git python3-pip swig libssl-dev sudo
+git clone https://github.com/BC-SECURITY/Empire.git
+cd Empire
+sudo ./setup/install.sh
+```
 
 ### Docker
 If you want to run Empire using a pre-built docker container:
