@@ -111,6 +111,7 @@ function is_libssl_1_0() {
 if cat /etc/debian_version | grep 10.* ; then
 	apt-get update
 	apt-get install -y python3-pip swig libssl-dev sudo
+fi
 
 # Ask for the administrator password upfront so sudo is no longer required at Installation.
 sudo -v
