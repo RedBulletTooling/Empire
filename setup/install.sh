@@ -106,6 +106,12 @@ function is_libssl_1_0() {
 	false
 }
 
+#Since Debian 10.* doesn't have sudo as standard, putting it first line. For some reason the python3-pip install that is already in the script
+#also doesn't work normally.
+if cat /etc/debian_version | grep 10.* ; then
+	apt-get update
+	apt-get install -y python3-pip swig libssl-dev sudo
+
 # Ask for the administrator password upfront so sudo is no longer required at Installation.
 sudo -v
 
